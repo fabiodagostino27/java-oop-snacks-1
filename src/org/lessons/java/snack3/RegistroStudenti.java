@@ -12,17 +12,19 @@ public class RegistroStudenti {
     // registro vuoto e un metodo pubblico per aggiungere studenti al registro.
     // Aggiungi un metodo che stampi la lista degli studenti.
 
-    private static ArrayList<Studente> registro;
+    private static ArrayList<String> registro;
 
     public RegistroStudenti() {
-        registro = new ArrayList<Studente>();
+        registro = new ArrayList<String>();
     }
 
-    public void addStudente(Studente studente) {
+    public void addStudente(String studente) {
         registro.add(studente);
     }
 
-    public ArrayList<Studente> getRegistro() {
-        return registro;
+    public void getRegistro() {
+        for (int i = 0; i < registro.size(); i++) {
+            System.out.println(registro.get(i));
+        }
     }
 }
