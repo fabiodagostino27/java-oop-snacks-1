@@ -23,4 +23,12 @@ public class ContoBancario {
     public void deposita(BigDecimal deposito) {
         saldo = saldo.add(deposito);
     }
+
+    public void preleva(BigDecimal prelievo) {
+        if (saldo.compareTo(prelievo) == 1 || saldo.compareTo(prelievo) == 0) {
+            saldo = saldo.subtract(prelievo);
+        } else {
+            System.out.println("Saldo insufficiente!");
+        }
+    }
 }

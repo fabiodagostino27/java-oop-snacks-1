@@ -11,5 +11,7 @@ public class Main {
         System.out.println(mioConto.getSaldo());
         mioConto.deposita(new BigDecimal("100.30"));
         System.out.println(mioConto.getSaldo());
+        mioConto.preleva(new BigDecimal("100"));
+        System.out.println(mioConto.getSaldo());
     }    
 }
