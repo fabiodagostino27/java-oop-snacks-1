@@ -19,4 +19,8 @@ public class ContoBancario {
     public BigDecimal getSaldo() {
         return saldo;
     }
+
+    public void deposita(BigDecimal deposito) {
+        saldo = saldo.add(deposito);
+    }
 }
