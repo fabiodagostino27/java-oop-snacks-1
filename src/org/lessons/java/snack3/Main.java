@@ -9,9 +9,9 @@ public class Main {
         Studente mario = new Studente("Mario", "Rossi", 21);
         Studente paolo = new Studente("Paolo", "Limiti", 23);
 
-        registro.addStudente(pinco.getStudentInfo());
-        registro.addStudente(mario.getStudentInfo());
-        registro.addStudente(paolo.getStudentInfo());
+        registro.addStudente(pinco);
+        registro.addStudente(mario);
+        registro.addStudente(paolo);
         registro.getRegistro();
     }
 }
