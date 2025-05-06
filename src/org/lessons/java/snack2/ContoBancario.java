@@ -21,7 +21,9 @@ public class ContoBancario {
     }
 
     public void deposita(BigDecimal deposito) {
-        saldo = saldo.add(deposito);
+        if (deposito.compareTo(new BigDecimal(0)) == 1) {
+            saldo = saldo.add(deposito);
+        }
     }
 
     public void preleva(BigDecimal prelievo) {

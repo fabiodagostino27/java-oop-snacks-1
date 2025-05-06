@@ -7,7 +7,7 @@ public class Main {
         ContoBancario mioConto = new ContoBancario("GB33BUKB20201555555555");
 
         System.out.println(mioConto.getSaldo());
-        mioConto.deposita(new BigDecimal("10.30"));
+        mioConto.deposita(new BigDecimal("-10.30"));
         System.out.println(mioConto.getSaldo());
         mioConto.deposita(new BigDecimal("100.30"));
         System.out.println(mioConto.getSaldo());
