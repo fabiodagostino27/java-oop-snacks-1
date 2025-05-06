@@ -1,8 +1,5 @@
 package org.lessons.java.snack3;
 
-import java.util.ArrayList;
-
-import org.lessons.java.snack1.Studente;
 
 public class RegistroStudenti {
     // Snack 3: Registro Studenti
@@ -12,19 +9,27 @@ public class RegistroStudenti {
     // registro vuoto e un metodo pubblico per aggiungere studenti al registro.
     // Aggiungi un metodo che stampi la lista degli studenti.
 
-    private static ArrayList<String> registro;
+    private String[] registro;
 
     public RegistroStudenti() {
-        registro = new ArrayList<String>();
+        this.registro = new String[0];
     }
 
     public void addStudente(String studente) {
-        registro.add(studente);
+        String[] registroAggiornato = new String[this.registro.length + 1]; 
+
+        for (int i = 0; i < this.registro.length; i++) {
+            registroAggiornato[i] = this.registro[i];
+        }
+
+        registroAggiornato[registroAggiornato.length - 1] = studente;
+
+        this.registro = registroAggiornato;
     }
 
     public void getRegistro() {
-        for (int i = 0; i < registro.size(); i++) {
-            System.out.println(registro.get(i));
+        for (int i = 0; i < registro.length; i++) {
+            System.out.println(registro[i]);
         }
     }
 }
